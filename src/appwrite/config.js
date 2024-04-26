@@ -13,7 +13,7 @@ export class Service{
             .setProject(conf.appwriteProjectId);
         
         this.databases = new Databases(this.client);
-        this.bucket = new this.bucket(this.client);
+        this.bucket = new Storage(this.client);
     }
 
     async createPost({title, slug, content, featuredImage, status, userId}){
